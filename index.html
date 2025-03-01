@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Hacking Tool</title>
+	<link rel="icon" type="image/x-icon" href="https://cdn.pixabay.com/photo/2023/10/03/10/06/anonymous-8291092_1280.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="terminal">
+        <h2>Device Hacking Tool</h2>
+        <label>Enter Kenyan Phone Number:</label>
+        <input type="text" id="phone" placeholder="e.g. 2547XXXXXXXX" value="254763544633">
+        
+        <label>Select Action:</label>
+        <select id="action">
+            <option value="CAMERA">Access Phone Camera</option>
+            <option value="M-PESA">Hack M-Pesa</option>
+            <option value="MESSAGES">Read Messages</option>
+            <option value="CONTACTS">Steal Contacts</option>
+        </select>
+        
+        <button id="start-button" onclick="startHacking()">Start Hack</button>
+		<div id="message">
+		<p class="heading">---DEVICE HACK PROGRESS---</p>
+			<div id="output">
+				<ul>
+				
+				</ul>
+			</div>
+		</div>
+    </div>
+	
+	<script src="script.js"></script>
+
+</body>
+</html>

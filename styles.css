@@ -1,0 +1,50 @@
+body {
+            background-color: black;
+            color: green;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        .terminal {
+            width: 60%;
+            margin: auto;
+            border: 2px solid green;
+            padding: 10px;
+            background-color: black;
+        }
+
+        input, select, button {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        #start-button {
+            background-color: green;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+        }
+		
+		#confirm, #stop {
+			background-color: green;
+			color: black;
+			border: 1px solid #00ff00;
+			display: inline;
+			margin-top: 0px !important
+		}
+		#message {
+			border-top: 1px solid green;
+		}
+
+        #output {
+            margin-top: 2px;
+            text-align: center;
+            height: 318px;
+            overflow-y: auto;
+            padding-top: 0px;        }
+		.heading{
+			font-size: 15px;
+			font-weight: bold;
+		}
