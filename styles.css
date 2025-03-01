@@ -21,7 +21,7 @@ body {
         }
 
         #start-button {
-            background-color: green;
+            background-color: red;
             color: black;
             cursor: pointer;
             font-weight: bold;
