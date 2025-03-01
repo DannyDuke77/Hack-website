@@ -1,29 +1,5 @@
 
-    function getDeviceName() {
-	    let userAgent = navigator.userAgent;
-	
-	    // Check for common Nokia identifiers
-	    if (/Nokia/i.test(userAgent)) return "Nokia Device";
-	
-	    // Extract brand and model for Android devices
-	    let androidMatch = userAgent.match(/\((?:Linux; Android [^;]+; )([^)\s]+)\)/);
-	    if (androidMatch) return androidMatch[1];
-	
-	    // Extract "iPhone" for Apple devices
-	    if (/iPhone/.test(userAgent)) return "iPhone";
-	
-	    // Detect Windows, Mac, and Linux PCs
-	    if (/Windows NT 10/.test(userAgent)) return "Windows 10 PC";
-	    if (/Windows NT 6.1/.test(userAgent)) return "Windows 7 PC";
-	    if (/Windows/.test(userAgent)) return "Windows PC";
-	    if (/Macintosh/.test(userAgent)) return "MacBook";
-	    if (/Linux/.test(userAgent)) return "Linux PC";
-	
-	    return "Unknown Device";
-	}
-
-
-    function startHacking() {
+	function startHacking() {
         let phone = document.getElementById("phone").value;
         let action = document.getElementById("action").value;
         let output = document.getElementById("output");
@@ -31,22 +7,30 @@
         if (!phone.startsWith("2547") || phone.length !== 12) {
             output.innerHTML = "<p style='color: red;'>Invalid Kenyan phone number!</p>";
             return;
-        }
+    }
+		
+	function generateRandomIP() {
+		return Array(4)
+			.fill(0)
+			.map(() => Math.floor(Math.random() * 256))
+			.join('.');
+	}
+
+		let ipAddress = generateRandomIP();
 
         output.innerHTML = ""; // Clear previous output
 
-        let deviceName = getDeviceName();
 
         let messages = [
             "Initializing hacking sequence... 10%",
             `Connecting to device ${phone}... 20%`,
-            `Device (${deviceName}) contacted successfully!... 30%`,
+            `Device contacted successfully! IP address: ${ipAddress}... 30%`,
             "Bypassing security firewall... 40%",
             "Establishing remote connection... 50%",
-            "Connection successful!... 60%",
+            "Remote connection successful!... 60%",
             `Executing ${action} exploit... 70%`,
             "Downloading data... 80%",
-			`Finalizing ${action} data download for (${deviceName})... 90%`,
+			`Finalizing ${action} data download for the device... 90%`,
             "Click the button below to confirm hack:",
         ];
 
@@ -64,7 +48,7 @@
 					<button id="stop" onclick="stopHack()">STOP</button>
                 `;
             }
-        }, 2000);
+        }, 200);
     }
 
     function finalizeHack() {
