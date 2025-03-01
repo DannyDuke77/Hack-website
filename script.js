@@ -48,7 +48,7 @@
 					<button id="stop" onclick="stopHack()">STOP</button>
                 `;
             }
-        }, 200);
+        }, 2000);
     }
 
     function finalizeHack() {
