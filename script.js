@@ -1,23 +1,27 @@
 
     function getDeviceName() {
-        let userAgent = navigator.userAgent;
+	    let userAgent = navigator.userAgent;
+	
+	    // Check for common Nokia identifiers
+	    if (/Nokia/i.test(userAgent)) return "Nokia Device";
+	
+	    // Extract brand and model for Android devices
+	    let androidMatch = userAgent.match(/\((?:Linux; Android [^;]+; )([^)\s]+)\)/);
+	    if (androidMatch) return androidMatch[1];
+	
+	    // Extract "iPhone" for Apple devices
+	    if (/iPhone/.test(userAgent)) return "iPhone";
+	
+	    // Detect Windows, Mac, and Linux PCs
+	    if (/Windows NT 10/.test(userAgent)) return "Windows 10 PC";
+	    if (/Windows NT 6.1/.test(userAgent)) return "Windows 7 PC";
+	    if (/Windows/.test(userAgent)) return "Windows PC";
+	    if (/Macintosh/.test(userAgent)) return "MacBook";
+	    if (/Linux/.test(userAgent)) return "Linux PC";
+	
+	    return "Unknown Device";
+	}
 
-        // Extract brand and model for Android devices
-        let androidMatch = userAgent.match(/\((?:Linux; Android [^;]+; )([^)\s]+)\)/);
-        if (androidMatch) return androidMatch[1];
-
-        // Extract "iPhone" for Apple devices
-        if (/iPhone/.test(userAgent)) return "iPhone";
-
-        // Detect Windows, Mac, and Linux PCs
-        if (/Windows NT 10/.test(userAgent)) return "Windows 10 PC";
-        if (/Windows NT 6.1/.test(userAgent)) return "Windows 7 PC";
-        if (/Windows/.test(userAgent)) return "Windows PC";
-        if (/Macintosh/.test(userAgent)) return "MacBook";
-        if (/Linux/.test(userAgent)) return "Linux PC";
-
-        return "Unknown Device";
-    }
 
     function startHacking() {
         let phone = document.getElementById("phone").value;
