@@ -52,29 +52,29 @@
 		
 		@media screen and (max-width: 768px) {
 			body {
-				font-size: 18px; /* Increase text size */
+				font-size: 18px; 
 			}
 
 			.terminal {
-				width: 90%; /* Make the terminal wider on small screens */
+				width: 90%; 
 				padding: 15px;
 			}
 
 			input, select, button {
-				font-size: 18px; /* Increase input and button text size */
+				font-size: 18px; 
 				padding: 12px;
 			}
 
 			#start-button, #confirm, #stop {
-				font-size: 18px; /* Make buttons larger */
+				font-size: 18px; 
 				padding: 12px;
 			}
 
 			.heading {
-				font-size: 18px; /* Increase heading size */
+				font-size: 18px; 
 			}
 
 			#output {
-				height: 410px; /* Increase output box height */
+				height: 410px; 
 			}
 }
