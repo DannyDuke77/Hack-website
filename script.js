@@ -24,7 +24,7 @@
         let messages = [
             "Initializing hacking sequence... 10%",
             `Connecting to device ${phone}... 20%`,
-            `Device contacted successfully! IP address: ${ipAddress}... 30%`,
+            `Device IP address: ${ipAddress}... 30%`,
             "Bypassing security firewall... 40%",
             "Establishing remote connection... 50%",
             "Remote connection successful!... 60%",
