@@ -1,4 +1,5 @@
-body {
+
+		body {
             background-color: black;
             color: green;
             font-family: monospace;
@@ -21,59 +22,59 @@ body {
         }
 
         #start-button {
-            background-color: red;
+            background-color: green;
             color: black;
             cursor: pointer;
             font-weight: bold;
         }
 		
-	#confirm, #stop {
-		background-color: green;
-		color: black;
-		border: 1px solid #00ff00;
-		display: inline;
-		margin-top: 0px !important
-	}
-	#message {
-		border-top: 1px solid green;
-	}
+		#confirm, #stop {
+			background-color: green;
+			color: black;
+			border: 1px solid #00ff00;
+			display: inline;
+			margin-top: 0px !important
+		}
+		#message {
+			border-top: 1px solid green;
+		}
 
         #output {
             margin-top: 2px;
             text-align: center;
-            height: 318px;
+            height: 310px;
             overflow-y: auto;
             padding-top: 0px;        }
-	.heading{
-		font-size: 15px;
-		font-weight: bold;
-	}
+		.heading{
+			font-size: 15px;
+			font-weight: bold;
+		}
+		
+		@media screen and (max-width: 768px) {
+			body {
+				font-size: 18px; /* Increase text size */
+			}
 
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 18px; /* Increase text size */
-    }
+			.terminal {
+				width: 90%; /* Make the terminal wider on small screens */
+				padding: 15px;
+			}
 
-    .terminal {
-        width: 90%; /* Make the terminal wider on small screens */
-        padding: 15px;
-    }
+			input, select, button {
+				font-size: 18px; /* Increase input and button text size */
+				padding: 12px;
+			}
 
-    input, select, button {
-        font-size: 18px; /* Increase input and button text size */
-        padding: 12px;
-    }
+			#start-button, #confirm, #stop {
+				font-size: 18px; /* Make buttons larger */
+				padding: 12px;
+			}
 
-    #start-button, #confirm, #stop {
-        font-size: 18px; /* Make buttons larger */
-        padding: 12px;
-    }
+			.heading {
+				font-size: 18px; /* Increase heading size */
+			}
 
-    .heading {
-        font-size: 18px; /* Increase heading size */
-    }
-
-    #output {
-        height: 400px; /* Increase output box height */
-    }
+			#output {
+				height: 410px; /* Increase output box height */
+			}
 }
